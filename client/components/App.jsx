@@ -1,9 +1,12 @@
 import React from 'react'
+import Header from './Header'
+import ScheduledWorks from './ScheduledWorks'
 
-function App () {
+function App() {
   return (
     <div>
-      <h1>Widgets for the win!</h1>
+      <Header />
+      <ScheduledWorks />
     </div>
   )
 }

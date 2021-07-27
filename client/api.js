@@ -1,9 +1,9 @@
 import request from 'superagent'
 
-const widgetUrl = '/api/v1/widgets/'
+const worksUrl = '/api/v1/works/'
 
-export function getWidgets () {
+export function getScheduledWorks() {
   return request
-    .get(widgetUrl)
+    .get(worksUrl)
     .then(response => response.body)
 }
