@@ -13,3 +13,9 @@ export function getFerryPositions() {
     .get(worksUrl + 'ferrypositions')
     .then(response => response.body)
 }
+
+export function getDatesByService() {
+  return request
+    .get(worksUrl + 'calendardates')
+    .then(response => response.body)
+}

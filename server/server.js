@@ -21,4 +21,11 @@ server.get('/api/v1/ferrypositions', (req, res) => {
         .catch(e => console.log(e))
 })
 
+server.get('/api/v1/calendardates', (req, res) => {
+    request
+        .get(`https://api.at.govt.nz/v2/gtfs/calendarDate?key=${process.env.REACT_APP_API_KEY}`)
+        .then(response => res.json(response.body))
+        .catch(e => console.log(e))
+})
+
 module.exports = server

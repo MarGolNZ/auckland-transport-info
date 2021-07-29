@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './Header'
 import ScheduledWorks from './ScheduledWorks'
 import FerryPositions from './FerryPositions'
+import CalendarDates from './CalendarDates'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <ScheduledWorks />
       <FerryPositions />
+      <CalendarDates />
     </div>
   )
 }
