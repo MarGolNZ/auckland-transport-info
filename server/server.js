@@ -14,4 +14,11 @@ server.get('/api/v1/works', (req, res) => {
         .catch(e => console.log(e))
 })
 
+server.get('/api/v1/ferrypositions', (req, res) => {
+    request
+        .get(`https://api.at.govt.nz/realtime/legacy/ferrypositions?key=${process.env.REACT_APP_API_KEY}`)
+        .then(response => res.json(response.body))
+        .catch(e => console.log(e))
+})
+
 module.exports = server

@@ -7,7 +7,7 @@ import { getScheduledWorks } from '../api'
 export default function Header() {
     const watch = true
     const { latitude, longitude } = usePosition(watch)
-    const [worksPosition, setWorksPosition] = useState([])
+    // const [worksPosition, setWorksPosition] = useState([])
     const [scheduledWorks, setScheduledWorks] = useState([-36.8509, 174.7645])
     const [map, setmap] = useState(null)
 
@@ -76,9 +76,6 @@ export default function Header() {
         <div className='scheduled-works'>
             <button onClick={displayScheduledWorks}>Show scheduled works in Auckland</button>
             <div>{map}</div>
-            <ul>
-                {scheduledWorks}
-            </ul>
         </div>
     )
 }
