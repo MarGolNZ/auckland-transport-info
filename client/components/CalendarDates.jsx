@@ -16,7 +16,11 @@ export default function CalendarDates() {
         getDatesByService()
             .then(dates => {
                 console.log(dates.response[0])
-                setCalendar(dates.response.map((date, i) => <li key={i}>{moment(date.date).format('MMMM Do YYYY')}</li>))
+                setCalendar(dates.response.map((date, i) => <li key={i}>{moment(date.date).format('MMMM Do YYYY').sort(function (a, b) { //convert date to timestamp and sort
+                    a = a.split('').reverse().join('')
+                    b = b.split('').reverse().join('')
+                    return a > b ? 1 : a < b ? -1 : 0
+                })}</li>))
             })
     }
 
